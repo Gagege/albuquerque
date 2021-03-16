@@ -41,3 +41,11 @@ func _physics_process(delta):
 	var velocity = get_velocity()
 	move_and_collide(velocity * delta)
 	animate(velocity)
+
+
+func _on_Area2D_body_entered(body):
+	GameEvents.emit_signal("mitch_close_to_note")
+
+
+func _on_Area2D_body_exited(body):
+	GameEvents.emit_signal("mitch_far_from_note")

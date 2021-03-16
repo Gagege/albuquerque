@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/mansion.png-3ef8114fee1862d3aeb0f12587fa61fd.stex"
+path="res://.import/dialog_intro2.png-2c446925dcec140e5c08082eaba45b95.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mansion.png"
-dest_files=[ "res://.import/mansion.png-3ef8114fee1862d3aeb0f12587fa61fd.stex" ]
+source_file="res://dialog_intro2.png"
+dest_files=[ "res://.import/dialog_intro2.png-2c446925dcec140e5c08082eaba45b95.stex" ]
 
 [params]
 
