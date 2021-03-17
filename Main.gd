@@ -8,8 +8,8 @@ func _ready():
 	GameEvents.connect("mitch_close_to_note", self, "_on_mitch_close_to_note")
 	GameEvents.connect("mitch_far_from_note", self, "_on_mitch_far_from_note")
 	current_dialog = 1
-	$Stuff.modulate = greyish_color
-	$Dialog.visible = true
+	$AnimationPlayer.play("Intro")
+	
 
 func _unhandled_key_input(event: InputEventKey):
 	
