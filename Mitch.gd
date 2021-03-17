@@ -41,6 +41,12 @@ func _physics_process(delta):
 	var velocity = get_velocity()
 	move_and_collide(velocity * delta)
 	animate(velocity)
+	if velocity == Vector2.ZERO:
+		if $WalkSound.is_playing():
+			$WalkSound.stop()
+	else:
+		if !$WalkSound.is_playing():
+			$WalkSound.play()
 
 
 func _on_Area2D_body_entered(body):

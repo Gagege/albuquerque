@@ -19,6 +19,7 @@ func _unhandled_key_input(event: InputEventKey):
 				if _mitch_close_to_note:
 					$Stuff.modulate = greyish_color
 					$BigNote.visible = true
+					$PaperMove.play()
 					_end_game()
 			KEY_ENTER:
 				$Stuff.modulate = greyish_color

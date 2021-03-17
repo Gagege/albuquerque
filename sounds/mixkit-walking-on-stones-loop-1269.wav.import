@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/mixkit-walking-on-stones-loop-1269.wav-9ad837cbb1e83867f8eb3f2ad1e8f409.sample"
+
+[deps]
+
+source_file="res://sounds/mixkit-walking-on-stones-loop-1269.wav"
+dest_files=[ "res://.import/mixkit-walking-on-stones-loop-1269.wav-9ad837cbb1e83867f8eb3f2ad1e8f409.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://mitch.png" type="Texture" id=1]
 [ext_resource path="res://Mitch.gd" type="Script" id=2]
@@ -15,111 +15,117 @@
 [ext_resource path="res://title.png" type="Texture" id=13]
 [ext_resource path="res://wildcard.png" type="Texture" id=14]
 [ext_resource path="res://enter_key.png" type="Texture" id=15]
+[ext_resource path="res://bensound-betterdays.ogg" type="AudioStream" id=16]
+[ext_resource path="res://sounds/mixkit-walking-in-the-forest-1214.wav" type="AudioStream" id=17]
+[ext_resource path="res://sounds/mixkit-keys-moving-1558.wav" type="AudioStream" id=18]
+[ext_resource path="res://sounds/mixkit-old-car-arriving-1536.wav" type="AudioStream" id=19]
+[ext_resource path="res://sounds/mixkit-walking-on-stones-loop-1269.wav" type="AudioStream" id=20]
+[ext_resource path="res://sounds/mixkit-paper-slide-1530.wav" type="AudioStream" id=21]
 
-[sub_resource type="RectangleShape2D" id=18]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 3.39618, 3.75668 )
 
-[sub_resource type="RectangleShape2D" id=19]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 5.55272, 14.0337 )
-
-[sub_resource type="AtlasTexture" id=2]
-atlas = ExtResource( 1 )
-region = Rect2( 0, 0, 7, 16 )
 
 [sub_resource type="AtlasTexture" id=3]
 atlas = ExtResource( 1 )
-region = Rect2( 7, 0, 7, 16 )
+region = Rect2( 0, 0, 7, 16 )
 
 [sub_resource type="AtlasTexture" id=4]
 atlas = ExtResource( 1 )
-region = Rect2( 14, 0, 7, 16 )
+region = Rect2( 7, 0, 7, 16 )
 
 [sub_resource type="AtlasTexture" id=5]
 atlas = ExtResource( 1 )
-region = Rect2( 21, 0, 7, 16 )
+region = Rect2( 14, 0, 7, 16 )
 
 [sub_resource type="AtlasTexture" id=6]
 atlas = ExtResource( 1 )
-region = Rect2( 42, 16, 7, 16 )
+region = Rect2( 21, 0, 7, 16 )
 
 [sub_resource type="AtlasTexture" id=7]
 atlas = ExtResource( 1 )
-region = Rect2( 49, 16, 7, 16 )
+region = Rect2( 42, 16, 7, 16 )
 
 [sub_resource type="AtlasTexture" id=8]
 atlas = ExtResource( 1 )
-region = Rect2( 14, 16, 7, 16 )
+region = Rect2( 49, 16, 7, 16 )
 
 [sub_resource type="AtlasTexture" id=9]
 atlas = ExtResource( 1 )
-region = Rect2( 21, 16, 7, 16 )
+region = Rect2( 14, 16, 7, 16 )
 
 [sub_resource type="AtlasTexture" id=10]
 atlas = ExtResource( 1 )
-region = Rect2( 28, 16, 7, 16 )
+region = Rect2( 21, 16, 7, 16 )
 
 [sub_resource type="AtlasTexture" id=11]
 atlas = ExtResource( 1 )
-region = Rect2( 35, 16, 7, 16 )
+region = Rect2( 28, 16, 7, 16 )
 
 [sub_resource type="AtlasTexture" id=12]
 atlas = ExtResource( 1 )
-region = Rect2( 0, 16, 7, 16 )
+region = Rect2( 35, 16, 7, 16 )
 
 [sub_resource type="AtlasTexture" id=13]
 atlas = ExtResource( 1 )
-region = Rect2( 7, 16, 7, 16 )
+region = Rect2( 0, 16, 7, 16 )
 
 [sub_resource type="AtlasTexture" id=14]
 atlas = ExtResource( 1 )
-region = Rect2( 28, 0, 7, 16 )
+region = Rect2( 7, 16, 7, 16 )
 
 [sub_resource type="AtlasTexture" id=15]
 atlas = ExtResource( 1 )
+region = Rect2( 28, 0, 7, 16 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 1 )
 region = Rect2( 35, 0, 7, 16 )
 
-[sub_resource type="SpriteFrames" id=16]
+[sub_resource type="SpriteFrames" id=17]
 animations = [ {
-"frames": [ SubResource( 2 ), SubResource( 3 ) ],
+"frames": [ SubResource( 3 ), SubResource( 4 ) ],
 "loop": true,
 "name": "idle_south",
 "speed": 1.0
 }, {
-"frames": [ SubResource( 4 ), SubResource( 5 ) ],
+"frames": [ SubResource( 5 ), SubResource( 6 ) ],
 "loop": true,
 "name": "idle_side",
 "speed": 1.0
 }, {
-"frames": [ SubResource( 6 ), SubResource( 7 ) ],
+"frames": [ SubResource( 7 ), SubResource( 8 ) ],
 "loop": true,
 "name": "walk_north",
 "speed": 3.0
 }, {
-"frames": [ SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ) ],
+"frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ],
 "loop": true,
 "name": "walk_side",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 12 ), SubResource( 13 ) ],
+"frames": [ SubResource( 13 ), SubResource( 14 ) ],
 "loop": true,
 "name": "walk_south",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 14 ), SubResource( 15 ) ],
+"frames": [ SubResource( 15 ), SubResource( 16 ) ],
 "loop": true,
 "name": "idle_north",
 "speed": 1.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=17]
+[sub_resource type="RectangleShape2D" id=18]
 extents = Vector2( 3.37179, 1.75478 )
 
-[sub_resource type="RectangleShape2D" id=20]
+[sub_resource type="RectangleShape2D" id=19]
 extents = Vector2( 3.3499, 5.15698 )
 
-[sub_resource type="Animation" id=21]
+[sub_resource type="Animation" id=20]
 resource_name = "Intro"
-length = 18.0
+length = 25.0
 step = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Wildcard:position")
@@ -205,6 +211,54 @@ tracks/6/keys = {
 "update": 1,
 "values": [  ]
 }
+tracks/7/type = "value"
+tracks/7/path = NodePath("WalkingToHouse:playing")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 11 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("CarArriving:playing")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 11 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Keys:playing")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 10, 11.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("WalkingToHouse:volume_db")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 18, 25 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, -80.0 ]
+}
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 3 )
@@ -229,7 +283,7 @@ position = Vector2( 0, -2.291 )
 texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stuff/Chair"]
-shape = SubResource( 18 )
+shape = SubResource( 1 )
 
 [node name="Desk" type="StaticBody2D" parent="Stuff"]
 position = Vector2( 67.6362, 53.9603 )
@@ -239,7 +293,7 @@ position = Vector2( 0.546, 0 )
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stuff/Desk"]
-shape = SubResource( 19 )
+shape = SubResource( 2 )
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="Stuff"]
 position = Vector2( 8.13669, 40.5399 )
@@ -250,14 +304,18 @@ position = Vector2( 1.456, 1.257 )
 texture = ExtResource( 7 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Stuff/KinematicBody2D"]
-frames = SubResource( 16 )
+frames = SubResource( 17 )
 animation = "idle_south"
 frame = 1
 playing = true
 offset = Vector2( 0, -6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stuff/KinematicBody2D"]
-shape = SubResource( 17 )
+shape = SubResource( 18 )
+
+[node name="WalkSound" type="AudioStreamPlayer" parent="Stuff/KinematicBody2D"]
+stream = ExtResource( 20 )
+autoplay = true
 
 [node name="Note" type="Sprite" parent="Stuff"]
 position = Vector2( 67.2518, 52.5271 )
@@ -273,7 +331,7 @@ texture = ExtResource( 11 )
 position = Vector2( 58.707, 52.6664 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stuff/Area2D"]
-shape = SubResource( 20 )
+shape = SubResource( 19 )
 
 [node name="BigNote" type="Sprite" parent="."]
 visible = false
@@ -289,7 +347,6 @@ position = Vector2( 27.8617, 31.8884 )
 texture = ExtResource( 15 )
 
 [node name="Title" type="Sprite" parent="."]
-visible = false
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 45, 45 )
 texture = ExtResource( 13 )
@@ -299,6 +356,24 @@ position = Vector2( 135, 45 )
 texture = ExtResource( 14 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/Intro = SubResource( 21 )
+anims/Intro = SubResource( 20 )
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 16 )
+autoplay = true
+
+[node name="WalkingToHouse" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 17 )
+
+[node name="CarArriving" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 19 )
+volume_db = -12.84
+
+[node name="PaperMove" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 21 )
+
+[node name="Keys" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 18 )
+volume_db = -9.107
 [connection signal="body_entered" from="Stuff/Area2D" to="Stuff/KinematicBody2D" method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Stuff/Area2D" to="Stuff/KinematicBody2D" method="_on_Area2D_body_exited"]
