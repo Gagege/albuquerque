@@ -9,6 +9,7 @@ func _ready():
 	GameEvents.connect("mitch_far_from_note", self, "_on_mitch_far_from_note")
 	current_dialog = 1
 	$AnimationPlayer.play("Intro")
+	$Stuff.modulate = greyish_color
 	
 
 func _unhandled_key_input(event: InputEventKey):
@@ -22,10 +23,9 @@ func _unhandled_key_input(event: InputEventKey):
 					$PaperMove.play()
 					_end_game()
 			KEY_ENTER:
-				$Stuff.modulate = greyish_color
 				if current_dialog == 5:
-					$Dialog.visible = false
 					$Stuff.modulate = Color.white
+					$Dialog.visible = false
 				else:
 					$Dialog.visible = true
 					current_dialog += 1
@@ -41,6 +41,9 @@ func _on_mitch_far_from_note():
 
 func _end_game():
 	yield(get_tree().create_timer(4), "timeout")
+	self.modulate = Color(0, 0, 0)
+	$Music.stop()
+	yield(get_tree().create_timer(.5), "timeout")
 	OS.alert('File not found: dad.png', 'Error')
 	get_tree().quit()
 
